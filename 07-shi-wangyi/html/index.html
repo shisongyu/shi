@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="format-detection" content="telephone=no, email=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../angular/swiper-3.4.2.min.css">
+    <script src="../angular/swiper-3.4.2.min.js"></script>
+    <script src="../angular/angular.min.js"></script>
+    <script src="../angular/angular-route1.4.5.js"></script>
+</head>
+<body ng-controller="myCtrl">
+
+<header>
+    <div class="tou">
+        <div class="one"><img src="../img1/header-1_03.jpg" alt=""></div>
+        <input type="text" placeholder="搜索音乐、歌词、电台">
+        <div class="one"><img src="../img1/header-2_03.gif" alt=""></div>
+    </div>
+
+    <div class="dao">
+        <ul>
+            <li><a href="#first">个性推荐</a></li>
+            <li><a href="#second">歌单</a></li>
+            <li><a href="#third">主播电台</a></li>
+            <li><a href="#fourth">排行榜</a></li>
+        </ul>
+    </div>
+</header>
+
+<section>
+    <ng-view></ng-view>
+</section>
+
+<footer>
+    <div class="di">
+        <div><a href="#">发现音乐</a></div>
+        <div><a href="#">我的音乐</a></div>
+        <div><a href="#">朋友</a></div>
+        <div><a href="#">账号</a></div>
+    </div>
+</footer>
+
+<script src="../js/index.js"></script>
+<script>
+//    var mySwiper = new Swiper('.swiper-container', {
+//        autoplay: 2000,//可选选项，自动滑动
+//        pagination : '.swiper-pagination',
+//        loop:true
+//    })
+
+    var app = angular.module("app",["ngRoute","app1"]);
+
+         app.controller("myCtrl",["$scope",function ($scope) {
+
+         }]);
+        app.config(["$routeProvider",function ($routeProvider) {
+                $routeProvider
+                        .when("/first",{
+                            templateUrl:"first.html",
+                            controller:"myCtrl1"
+                        })
+                        .when("/second",{
+                            templateUrl:"second.html",
+                            controller:"myCtrl1"
+                        })
+                        .when("/third",{
+                            templateUrl:"third.html",
+                            controller:"myCtrl1"
+                        })
+                        .when("/fourth",{
+                            templateUrl:"fourth.html",
+                            controller:"myCtrl1"
+                        })
+                        .otherwise({
+                            redirectTo:"/first"
+})
+}]);
+</script>
+</body>
+</html>

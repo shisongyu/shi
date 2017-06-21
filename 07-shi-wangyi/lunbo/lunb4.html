@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="format-detection" content="telephone=no, email=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <script src="../../../swiper-3.4.2.min.js"></script>
+    <link rel="stylesheet" href="../../../swiper-3.4.2.min.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .swiper-slide{
+            height: 300px;
+            /*background-color: aquamarine;*/
+        }
+        .swiper-slide img{
+            /*width: 1000px;*/
+            height: 300px;
+            /*max-width: 1300px;*/
+            /*margin-left: 30px;*/
+        }
+    </style>
+</head>
+<body>
+
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide" data-history="1">
+            <img src="img/banner_02.jpg" alt="">
+        </div>
+        <div class="swiper-slide" data-history="Slide 2">
+            <img src="img/banner-2_02.jpg" alt="">
+        </div>
+        <div class="swiper-slide" data-history="3">
+            <img src="img/banner_02%20-%20副本.jpg" alt="">
+        </div>
+
+        <div class="swiper-slide" data-history="1">
+            <img src="img/banner_02.jpg" alt="">
+        </div>
+        <div class="swiper-slide" data-history="Slide 2">
+            <img src="img/banner-2_02.jpg" alt="">
+        </div>
+        <div class="swiper-slide" data-history="3">
+            <img src="img/banner_02%20-%20副本.jpg" alt="">
+        </div>
+
+
+    </div>
+</div>
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        history: 'love',
+    });
+</script>
+
+</body>
+</html>
